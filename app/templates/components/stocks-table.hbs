@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="table-responsive col-md-12 col-md-offset=3">
+    <table class="table">
+      <thead>
+        <tr>
+          <td class="col-md-5"><strong>Company Name</strong></td>
+          <td class="col-md-3"><strong>Stock Symbol</strong></td>
+          <td class="col-md-4"><strong>Low</strong></td>
+          <td class="col-md-4"><strong>High</strong></td>
+          <td class="col-md-4"><strong>Open</strong></td>
+          <td class="col-md-4"><strong>Close</strong></td>
+          <td class="col-md-4"><strong>Average</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |stock|}}
+          <tr>
+            <td>
+              <span {{action 'view' this}}>
+                {{#link-to 'stocks.stock' stock action='view' actionParam=this}}
+                  {{stock.name}}
+                {{/link-to}}
+              </span>
+
+            </td>
+            <td>
+              {{#link-to 'stocks.stock' stock title=stock.name }}{{stock.symbol}}{{/link-to}}
+            </td>
+            <td>
+              {{#link-to 'stocks.stock' stock title=stock.name }}${{stock.low}}{{/link-to}}
+            </td>
+            <td>
+              {{#link-to 'stocks.stock' stock title=stock.name }}${{stock.high}}{{/link-to}}
+            </td>
+            <td>
+              {{#link-to 'stocks.stock' stock title=stock.name }}${{stock.open}}{{/link-to}}
+            </td>
+            <td>
+              {{#link-to 'stocks.stock' stock title=stock.name }}${{stock.close}}{{/link-to}}
+            </td>
+            <td>
+              {{#link-to 'stocks.stock' stock title=stock.name }}${{stock.average}}{{/link-to}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="autocomplete-input">
+  {{input
+    class="form-control"
+    placeholder="Enter company name"
+    autofocus="autofocus"
+    type="text"
+    key-up="findStockData"}}
+</div>
+
+{{#stocks-table model=foundItems}}
+{{/stocks-table}}
