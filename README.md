@@ -1,7 +1,6 @@
-# Stock-api-front-end
+# A Simple Stock Info App
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app allows a user to search for a particular publicly traded company and display a price history for a selected stock symbol.
 
 ## Prerequisites
 
@@ -22,7 +21,8 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
+* Stock API must be running prior to starting this Ember App: [https://github.com/vladhadzhiyski/stock-api](https://github.com/vladhadzhiyski/stock-api)
+* `ember server --proxy http://localhost:3000`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
